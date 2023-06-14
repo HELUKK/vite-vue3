@@ -13,8 +13,8 @@
       <br />
       <button @click="changePre">changePre</button>
       <br />
-      <span v-if="premission(1)">权限为一的用户</span>
-      <span v-if="premission(2)">权限为2的用户</span>
+      <span v-if="premission(1)">权限为1的用户</span>
+      <span v-if="store.premissionG(2)">权限为2的用户</span>
     </p>
   </div>
 </template>
@@ -23,7 +23,7 @@ import { storeToRefs } from 'pinia'
 import { useExample08Stroe } from './Example08Store'
 
 const store = useExample08Stroe()
-console.log(store)
+console.log(store.countDouble)
 
 // 可引入为组件变量
 // 返回的计算属性的结果，由于数据值为基本数据类型，需保证响应式
@@ -31,7 +31,7 @@ const dCount = storeToRefs(store).countDouble
 console.log(dCount)
 
 // 自动封装为组件计算属性
-const premission = storeToRefs(store).premission
+const premission = storeToRefs(store).premissionG
 console.log(premission)
 
 const changePre = () => (store.UserS.level = store.UserS.level == 1 ? 2 : 1)
