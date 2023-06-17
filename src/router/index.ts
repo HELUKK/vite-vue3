@@ -76,6 +76,16 @@ const routes: Array<RouteRecordRaw> = [
     props: true,
     path: '/example08-3',
     component: () => import('@/views/example08/Example08-3.vue')
+  },
+  {
+    props: true,
+    path: '/example09-1',
+    component: () => import('@/views/example09/Example09-1.vue')
+  },
+  {
+    props: true,
+    path: '/example09-2',
+    component: () => import('@/views/example09/Example09-2.vue')
   }
 ]
 const router = createRouter({
