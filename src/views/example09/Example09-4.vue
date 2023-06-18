@@ -34,7 +34,6 @@
 import type { Course } from '@/datasource/Types'
 import { computed, defineAsyncComponent, ref } from 'vue'
 import { useExample09Stroe } from './Example09Store'
-import { storeToRefs } from 'pinia'
 const editbutton4 = defineAsyncComponent(() => import('./EditButton4.vue'))
 const store = useExample09Stroe()
 store.listCoursesA()
