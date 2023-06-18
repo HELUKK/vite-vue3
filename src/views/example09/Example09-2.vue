@@ -19,12 +19,12 @@
         <td>{{ index + 1 }}</td>
         <td>{{ c.name }}</td>
         <td>{{ c.createTime }}</td>
-        <td><button type="button" @click=";(courseEditR, c), (activeR, true)">edit</button></td>
+        <td><button @click=";(courseEditR = c), (activeR = true)">edit</button></td>
       </tr>
     </table>
     <p>{{ courseEditedNameR }}</p>
     <editbutton2
-      v-if="courseEditR"
+      v-if="activeR"
       v-bind:course="courseEditR"
       @emitClose="activeR = false"
       @emitSubmit="onEditSubmit"
