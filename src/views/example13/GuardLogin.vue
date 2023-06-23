@@ -31,7 +31,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useExample13Store } from './Example13Store'
+import { useExample13Store } from './Example13Store';
 
 const store = useExample13Store()
 const userForm = ref({ number: '', password: '' })

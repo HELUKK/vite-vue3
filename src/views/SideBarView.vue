@@ -108,7 +108,7 @@
     <h3>Loading Components</h3>
     <ul>
       <li>
-        <router-link to="/example15">suspense</router-link>
+        <router-link to="/example15-1">suspense</router-link>
       </li>
       <li>
         <router-link to="/example15-2">component/v-if</router-link>

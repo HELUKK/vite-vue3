@@ -180,6 +180,16 @@ const routes: Array<RouteRecordRaw> = [
         }
       }
     ]
+  },
+  {
+    props: true,
+    path: '/example15-1',
+    component: () => import('@/views/example15/Example15-1.vue')
+  },
+  {
+    props: true,
+    path: '/example15-2',
+    component: () => import('@/views/example15/Example15-2.vue')
   }
 ]
 const router = createRouter({
