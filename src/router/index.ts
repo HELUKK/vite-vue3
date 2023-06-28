@@ -190,6 +190,38 @@ const routes: Array<RouteRecordRaw> = [
     props: true,
     path: '/example15-2',
     component: () => import('@/views/example15/Example15-2.vue')
+  },
+  {
+    path: '/homework01',
+    component: () => import('@/views/homework01/homeworkV01.vue')
+  },
+  {
+    props: true,
+    path: '/homework02',
+    component: () => import('@/views/homework02/HomeView.vue'),
+    children: [
+      {
+        props: true,
+        path: 'location',
+        component: () => import('@/views/homework02/LocationView.vue')
+      },
+      {
+        props: true,
+        name: 'foods',
+        path: 'foods',
+        component: () => import('@/views/homework02/FoodsView.vue')
+      },
+      {
+        props: true,
+        path: 'shops/:sid',
+        component: () => import('@/views/homework02/ShopView.vue')
+      },
+      {
+        props: true,
+        path: 'orders',
+        component: () => import('@/views/homework02/OrderView.vue')
+      }
+    ]
   }
 ]
 const router = createRouter({
